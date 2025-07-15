@@ -48,25 +48,6 @@
                 box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
             }
         }
-        body {
-            scroll-behavior: smooth;
-            background-color: #F5F5DC; /* Neutral background */
-        }
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .mobile-menu.open {
-            max-height: 300px;
-        }
-        .spice-carousel {
-            animation: rotate 20s linear infinite;
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="bg-neutral text-dark font-sans">
@@ -75,26 +56,17 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <span class="text-primary text-2xl font-bold">CookEase</span>
-                <span class="ml-2 text-xs bg-herb text-white px-2 py-1 rounded-full">AI-POWERED</span>
+                <span class="ml-2 text-xs bg-herb text-white px-2 py-1 rounded-full">CA</span>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#problems" class="font-medium hover:text-primary transition-colors">Problems</a>
                 <a href="#targets" class="font-medium hover:text-primary transition-colors">Targets</a>
                 <a href="#design" class="font-medium hover:text-primary transition-colors">Design</a>
-                <a href="#functions" class="font-medium hover:text-primary transition-colors">Features</a>
+                <a href="#functions" class="font-medium hover:text-primary transition-colors">Functions</a>
             </div>
-            <button class="md:hidden text-dark text-xl" id="menu-toggle">
+            <button class="md:hidden text-dark text-xl">
                 <i class="fa fa-bars"></i>
             </button>
-        </div>
-        <!-- Mobile menu -->
-        <div class="mobile-menu bg-white/90 backdrop-blur-sm md:hidden" id="mobile-menu">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#problems" class="font-medium hover:text-primary transition-colors py-2 border-b border-gray-100">Problems</a>
-                <a href="#targets" class="font-medium hover:text-primary transition-colors py-2 border-b border-gray-100">Targets</a>
-                <a href="#design" class="font-medium hover:text-primary transition-colors py-2 border-b border-gray-100">Design</a>
-                <a href="#functions" class="font-medium hover:text-primary transition-colors py-2 border-b border-gray-100">Features</a>
-            </div>
         </div>
     </nav>
 
@@ -269,20 +241,7 @@
                         
                         <div class="bg-neutral/50 rounded-xl overflow-hidden shadow-md card-hover">
                             <div class="h-48 bg-rich/30 flex items-center justify-center p-4">
-                                <div class="spice-carousel w-32 h-32 relative">
-                                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                                        <span class="text-xs">Garlic</span>
-                                    </div>
-                                    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-10 bg-herb/20 rounded-full flex items-center justify-center">
-                                        <span class="text-xs">Basil</span>
-                                    </div>
-                                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
-                                        <span class="text-xs">Paprika</span>
-                                    </div>
-                                    <div class="absolute top-1/2 left-0 transform -translate-y-1/2 w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center">
-                                        <span class="text-xs">Cumin</span>
-                                    </div>
-                                </div>
+                                <i class="fa fa-flask text-6xl text-rich"></i>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold mb-2 text-rich">Magnetic Spice Pod Carousel</h4>
@@ -592,82 +551,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-10 text-center">
-                What Our Users Say
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-neutral/50 p-6 rounded-xl shadow-sm card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                            <i class="fa fa-user text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Sarah J.</h3>
-                            <p class="text-sm text-gray-600">College Student</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">
-                        "As a student with limited cooking skills, CookEase has been a game-changer. The voice guidance makes cooking so much easier!"
-                    </p>
-                    <div class="flex text-yellow-400 mt-4">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="bg-neutral/50 p-6 rounded-xl shadow-sm card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4">
-                            <i class="fa fa-user text-secondary"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Michael T.</h3>
-                            <p class="text-sm text-gray-600">Busy Professional</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">
-                        "The meal planning and smart shopping features have saved me hours each week. I actually enjoy cooking now!"
-                    </p>
-                    <div class="flex text-yellow-400 mt-4">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="bg-neutral/50 p-6 rounded-xl shadow-sm card-hover">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-herb/20 rounded-full flex items-center justify-center mr-4">
-                            <i class="fa fa-user text-herb"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Emily R.</h3>
-                            <p class="text-sm text-gray-600">Young Professional</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">
-                        "The spice carousel and recipe suggestions have expanded my cooking skills dramatically. I waste less food and eat better!"
-                    </p>
-                    <div class="flex text-yellow-400 mt-4">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="py-16 bg-gradient-appetite text-white">
         <div class="container mx-auto px-4">
@@ -718,7 +601,7 @@
                         <li><a href="#problems" class="text-gray-400 hover:text-white transition-colors">Problems</a></li>
                         <li><a href="#targets" class="text-gray-400 hover:text-white transition-colors">Targets</a></li>
                         <li><a href="#design" class="text-gray-400 hover:text-white transition-colors">Design</a></li>
-                        <li><a href="#functions" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#functions" class="text-gray-400 hover:text-white transition-colors">Functions</a></li>
                     </ul>
                 </div>
                 
@@ -786,29 +669,10 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
-                    // Close mobile menu if open
-                    mobileMenu.classList.remove('open');
                 }
             });
         });
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-        });
-
-        // Spice carousel animation
-        const spiceCarousel = document.querySelector('.spice-carousel');
-        if (spiceCarousel) {
-            setInterval(() => {
-                const rotation = parseInt(getComputedStyle(spiceCarousel).transform.split(',')[3] || 0;
-                spiceCarousel.style.transform = `rotate(${rotation + 360}deg)`;
-            }, 20000);
-        }
     </script>
 </body>
 </html>
+    
